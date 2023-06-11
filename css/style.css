@@ -118,7 +118,11 @@ li {
 li.hover-title {
   display: inline;
   pointer-events: auto;
-  margin-bottom: 0.5em; }
+  margin-bottom: 0.5em;
+}
+li.hover-title > .list {
+  display: inline;
+}
 
 .hover-image {
   visibility: hidden; }
