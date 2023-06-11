@@ -403,28 +403,41 @@ header > nav > ul{
 
 
 /* Footer */
+.footer {
+  position: fixed; bottom: 0;
+}
+
 .footer > ul {
-  position: fixed; bottom: 0vh;
-	display: flex;
+  display: flex;
   flex-flow: row wrap;
-  margin-left: 32px;
-  margin-top: 32px;
-  padding-left: 0;
   padding-bottom: 1vh;
-  width: 100%;
   z-index: 2;
 }
-.footer > ul > li > a{
+.footer > ul > li {
+  margin-bottom: 0;
+  margin-right: 1rem;
+}
+
+.footer > ul > li > a {
   font-family: "basier_squareregular";
 	font-size: 22px;
   font-weight: normal;
   line-height: 42px;
-  margin-right: 1rem;
 }
 @media (max-width: 480px) {
 	.footer {
 		grid-template-columns: 1fr;
 		grid-gap: 18px;
     position: relative;
-    width: 80%;
-		margin: 0 16px 8px 16px; } }
+		margin: 0 16px 8px 16px;
+  }
+
+  .footer > ul {
+    padding-left: 0;
+  }
+
+  .footer > ul > li > a {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
